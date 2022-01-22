@@ -30,21 +30,12 @@ const UserSchema = mongoose.Schema({
         required: false,
     },
     purchase_history: {
-<<<<<<< HEAD
-        type: [Number],
-        required: false,
-    },
-    listing_history: {
-        type: [Number],
-        required: false,
-=======
         type: [mongoose.ObjectId],
         required: true,
     },
     listing_history: {
         type: [mongoose.ObjectId],
         required: true,
->>>>>>> 79d4feb5a53854afc5c110b6a635740780b270e6
     },
 });
 
