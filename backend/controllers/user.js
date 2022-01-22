@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 exports.getUserIndex = async (req, res) => {
     //res.status(200).render('index');
-    const user = await User.find((data) => data).clone().catch(function(err){ console.log(err)});
+    const user = await User.find((data) => data).clone().catch(function(err){ });
 
     try {
         console.log(user);
