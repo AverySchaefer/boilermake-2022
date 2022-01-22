@@ -7,7 +7,7 @@ const UserSchema = mongoose.Schema({
     },
     user_id: {
         type: mongoose.ObjectId,
-        required: true,
+        required: false,
     },
     rating: {
         type: Number,
@@ -23,11 +23,11 @@ const UserSchema = mongoose.Schema({
     },
     purchase_history: {
         type: [Number],
-        required: true,
+        required: false,
     },
     listing_history: {
         type: [Number],
-        required: true,
+        required: false,
     },
 });
 
