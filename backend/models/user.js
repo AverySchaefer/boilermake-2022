@@ -16,7 +16,7 @@ const UserSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
     rating: {
         type: Number,
         required: false,
@@ -30,11 +30,11 @@ const UserSchema = mongoose.Schema({
         required: false,
     },
     purchase_history: {
-        type: [Number],
+        type: [mongoose.ObjectId],
         required: true,
     },
     listing_history: {
-        type: [Number],
+        type: [mongoose.ObjectId],
         required: true,
     },
 });
