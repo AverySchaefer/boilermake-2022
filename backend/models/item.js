@@ -1,3 +1,5 @@
+
+
 const mongoose = require('mongoose');
 
 const ItemSchema = mongoose.Schema({
@@ -7,11 +9,11 @@ const ItemSchema = mongoose.Schema({
     },
     item_id: {
         type: mongoose.ObjectId,
-        required: true,
+        required: false,
     },
     seller_id: {
         type: mongoose.ObjectId,
-        required: true,
+        required: false, //change to true later
     },
     description: {
         type: String,
@@ -19,7 +21,7 @@ const ItemSchema = mongoose.Schema({
     },
     images: {
         type: [String],
-        required: true,
+        required: false, //change to true later
     },
     tag: {
         type: String,

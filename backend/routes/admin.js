@@ -11,5 +11,7 @@ router.get('/add-item', adminController.getAddItem);
 router.post('/add-user', adminController.postUser);
 router.post('/add-item', adminController.postItem);
 
+router.get('/:itemId', adminController.getItem);
+
 
 module.exports = router;
