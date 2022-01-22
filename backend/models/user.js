@@ -9,6 +9,14 @@ const UserSchema = mongoose.Schema({
         type: mongoose.ObjectId,
         required: true,
     },
+    email: {
+        type: String,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    }
     rating: {
         type: Number,
         required: false,
