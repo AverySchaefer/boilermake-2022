@@ -12,7 +12,7 @@ exports.getIndex = async (req, res) => {
         console.log(error);
     }
 };
-// methods for getting anime
+// methods for getting items
 exports.getItem = async (req, res) => {
     const itemId = req.params.itemId;
 
