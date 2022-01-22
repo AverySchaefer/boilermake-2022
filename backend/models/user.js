@@ -6,7 +6,7 @@ const UserSchema = mongoose.Schema({
         required: true,
     },
     user_id: {
-        type: Number,
+        type: mongoose.ObjectId,
         required: true,
     },
     rating: {

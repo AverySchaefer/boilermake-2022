@@ -6,11 +6,11 @@ const ItemSchema = mongoose.Schema({
         required: true,
     },
     item_id: {
-        type: Number,
+        type: mongoose.ObjectId,
         required: true,
     },
     seller_id: {
-        type: Number,
+        type: mongoose.ObjectId,
         required: true,
     },
     description: {
