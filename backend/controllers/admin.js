@@ -1,9 +1,9 @@
 const User = require('../models/user');
 const Item = require('../models/item');
 
-exports.getIndex = async (req, res) => {
+exports.getItemIndex = async (req, res) => {
     //res.status(200).render('index');
-    const item = await Item.find((data) => data).clone().catch(function(err){ console.log(err)});
+    const item = await Item.find((data) => data).clone().catch(function(err){});
 
     try {
         console.log(item);
@@ -12,12 +12,25 @@ exports.getIndex = async (req, res) => {
         console.log(error);
     }
 };
-// methods for getting items
+
+exports.getUserIndex = async (req, res) => {
+    //res.status(200).render('index');
+    const user = await User.find((data) => data).clone().catch(function(err){ });
+
+    try {
+        console.log(user);
+        res.status(200).render('index', { user: user });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+// methods for getting anime
 exports.getItem = async (req, res) => {
     const itemId = req.params.itemId;
-
-    const item = await Item.findById(itemId, (item) => item);
-
+    console.log("testing 1");
+    const item = await Item.findById(itemId, (item) => item).clone().catch(function(err){ });
+    console.log("testing 2");
     try {
         console.log(item);
         res.status(200).render('item', { item: item });
@@ -28,12 +41,24 @@ exports.getItem = async (req, res) => {
 
 //Getter methods for different models
 
-exports.getAddUser = (req, res) => {
-    res.status(200).render('edit-user');
+exports.getUser = async (req, res) => {
+    const userId = req.params.userId;
+
+    const user = await User.findById(userId, (user) => user);
+    
+    try {
+        console.log(user);
+        res.status(200).render('user', { user: user });
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 exports.getAddItem = (req, res) => {
     res.status(200).render('edit-item');
+};
+exports.getAddUser = (req, res) => {
+    res.status(200).render('edit-user');
 };
 
 exports.postUser = (req, res) => {
