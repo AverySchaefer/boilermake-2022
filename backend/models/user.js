@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const AnimeSchema = mongoose.Schema({
+const UserSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -31,4 +31,4 @@ const AnimeSchema = mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('series', AnimeSchema);
+module.exports = mongoose.model('user', UserSchema);
