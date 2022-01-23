@@ -25,16 +25,31 @@ exports.getUserIndex = async (req, res) => {
     }
 };
 
-// methods for getting anime
+// methods for getting item
 exports.getItem = async (req, res) => {
     const itemId = req.params.itemId;
-    console.log("testing 1");
+    //console.log(itemId);
     const item = await Item.findById(itemId, (item) => item).clone().catch(function(err){ });
-    console.log("testing 2");
+    //console.log("testing 2");
     try {
         console.log(item);
         res.status(200).render('item', { item: item });
     } catch (error) {
+        console.log(error);
+    }
+};
+
+exports.getItemByTag = async (req, res) => {
+    //console.log("in getItemByTag");
+    const itemTags = req.params.itemTags;
+    //console.log("got tags");
+    //console.log(itemTags);
+    const item = await Item.find({tag: "boat"}).clone().catch(function(err){ });
+    //console.log("retrieved items");
+    try {
+        console.log(item);
+        res.status(200).render('item', { item: item });
+    }  catch (error) {
         console.log(error);
     }
 };

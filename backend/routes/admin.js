@@ -10,6 +10,8 @@ router.get('/', userController.getUserIndex);
 router.get('/add-user', userController.getAddUser);
 router.get('/add-item', adminController.getAddItem);
 
+router.get('/get-by-tag/:itemTags', adminController.getItemByTag);
+
 router.post('/add-user', userController.postUser);
 router.post('/add-item', adminController.postItem);
 
