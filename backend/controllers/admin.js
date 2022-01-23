@@ -42,9 +42,11 @@ exports.getItem = async (req, res) => {
 exports.getItemByTag = async (req, res) => {
     //console.log("in getItemByTag");
     const itemTags = req.params.itemTags;
+    const trimmedTags = itemTags.replace(':', '');
     //console.log("got tags");
-    //console.log(itemTags);
-    const item = await Item.find({tag: "boat"}).clone().catch(function(err){ });
+    console.log(itemTags);
+    console.log(trimmedTags);
+    const item = await Item.find({tag: trimmedTags}).clone().catch(function(err){ });
     //console.log("retrieved items");
     try {
         console.log(item);
