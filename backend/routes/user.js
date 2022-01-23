@@ -29,4 +29,29 @@ itemRouter.post('/user', async (req, res) => {
 	});
 });
 
+//get items by ID
+itemRouter.get('/:userID', async (req, res) => {
+    let { userID } = req.params;
+    if (!userID) {
+        res.status(400).send({ msg: 'A user ID must be provided.' });
+		return;
+    }
+
+    let user;
+    try {
+        user = await User.findById(userID).exec();
+    } catch (error) {
+        console.error(e);
+		res.status(500).send({ msg: 'Internal server error.' });
+		return;
+    }
+
+    if (!user) {
+		res.status(400).send({ msg: 'No such user exists.' });
+		return;
+	}
+
+    res.status(200).send({ user });
+});
+
 export { userRouter };
