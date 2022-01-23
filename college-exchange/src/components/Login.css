@@ -1,0 +1,63 @@
+.login {
+  display: flex;
+  justify-content: center;
+
+  width: 500px;
+  border-radius: 2rem;
+  background-color: blanchedalmond;
+  margin-top: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: blanchedalmond; */
+  flex-flow: column;
+  width: 100px;
+}
+
+.login-box {
+}
+
+.email-text {
+  margin-bottom: 1rem;
+}
+
+.password-text {
+  margin-bottom: 1rem;
+}
+
+.login-text {
+  list-style-type: none;
+}
+
+.login-btn {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  background-color: #c28e0e;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+
+  transition: all 1s;
+  animation: ease-in-out;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.password-btn {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  background-color: #c28e0e;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: all 1s;
+  animation: ease-in-out;
+  margin-bottom: 1rem;
+}
