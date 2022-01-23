@@ -17,32 +17,18 @@ export class Home extends Component {
         <h1>Recommended Item for you</h1>
         <div className="recommendedItem">
           <ul className="Items">
-            {
-              /*Items.map((cname, productName, sellerName, price, rating) => {
+            {Items.map((item) => {
               return (
-                <li className={cname}>
+                <li className={item.cname}>
                   <div className="item-box">
-                    <p1>{productName}</p1>
-                    {sellerName}
-                    {price}
-                    {rating}
+                    <p1>{item.productName1}</p1>
+                    {item.sellerName}
+                    {item.price}
+                    {item.ratings}
                   </div>
                 </li>
               );
-              })*/
-              Items.map((item) => {
-                return (
-                  <li className={item.cname}>
-                    <div className="item-box">
-                      <p1>{item.productName1}</p1>
-                      {item.sellerName}
-                      {item.price}
-                      {item.ratings}
-                    </div>
-                  </li>
-                );
-              })
-            }
+            })}
           </ul>
         </div>
       </div>

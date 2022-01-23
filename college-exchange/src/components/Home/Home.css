@@ -1,12 +1,31 @@
 .searchInput {
   margin-top: 1rem;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   background-color: white;
 
   align-items: center;
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 16rem;
+  height: 8rem;
+  border-radius: 30px;
+  transition: all 0.2s;
+  animation: ease-in-out;
+  justify-content: space-around;
+  border-color: burlywood;
+  border: solid;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
 .searchInput input {
   border: 0;
   padding: 15px;
