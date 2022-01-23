@@ -1,7 +1,13 @@
 .profile {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  background-color: #c28e0e;
+  margin-top: 1rem;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
 }
 
 .text-desc {
@@ -13,10 +19,11 @@
 
 .name {
   height: 15px;
+  margin-bottom: 10px;
 }
 
-.desc {
-  background-color: cornsilk;
+.desc-us {
+  background-color: rgb(248, 216, 86);
 
   height: 10rem;
   width: 10rem;
@@ -67,4 +74,24 @@
 
 .historyImg {
   width: 10rem;
+}
+
+.btn {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  background-color: #c28e0e;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  transition: all 1s;
+  animation: ease-in-out;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  color: black;
+  box-shadow: 3px 3px 3px black;
 }

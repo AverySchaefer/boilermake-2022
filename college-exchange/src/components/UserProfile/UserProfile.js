@@ -20,14 +20,14 @@ export class UserProfile extends Component {
             <textarea
               type="text"
               value="Description: NO ONE CAN AGREE ON WHO CAME UP WITH THE IDEA OF WALDO."
-              className="desc"
+              className="desc-us"
               readonly="readonly"
             ></textarea>
             <h2>4.5</h2>
           </div>
         </div>
 
-        <button>Edit</button>
+        <button className="btn">Edit</button>
 
         <ul className="histories">
           {HistoryItems.map((item) => {
