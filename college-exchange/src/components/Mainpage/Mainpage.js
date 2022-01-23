@@ -1,8 +1,7 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./Mainpage.css";
 import logo from "./logo.png";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Button } from "bootstrap";
+
 import Modal from "react-modal";
 
 function MainPage() {

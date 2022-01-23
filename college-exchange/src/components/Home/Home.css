@@ -1,0 +1,13 @@
+.searchInput {
+  margin-top: 1rem;
+  /* display: flex; */
+  justify-content: center;
+  background-color: white;
+
+  align-items: center;
+}
+
+.searchInput input {
+  border: 0;
+  padding: 15px;
+}
