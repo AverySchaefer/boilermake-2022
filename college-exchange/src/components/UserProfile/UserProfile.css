@@ -41,6 +41,7 @@
   flex-flow: column;
   background-color: #ceb888;
   width: 10rem;
+  height: 15rem;
   padding: 20px;
   border-radius: 1rem;
   transition: all 0.2s;
@@ -74,6 +75,7 @@
 
 .historyImg {
   width: 10rem;
+  height: 10rem;
 }
 
 .btn {
