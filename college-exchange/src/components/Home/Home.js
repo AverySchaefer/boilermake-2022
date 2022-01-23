@@ -10,7 +10,8 @@ export class Home extends Component {
           <i class="fas fa-search"></i>
           <input
             type="text"
-            placeholder="What items you are looking for?"
+            placeholder="      Keyword"
+            className="search"
           ></input>
         </div>
 

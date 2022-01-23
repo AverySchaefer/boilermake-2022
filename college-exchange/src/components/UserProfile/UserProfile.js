@@ -29,6 +29,8 @@ export class UserProfile extends Component {
 
         <button className="btn">Edit</button>
 
+        <h1>Purchase History</h1>
+
         <ul className="histories">
           {HistoryItems.map((item) => {
             return (
