@@ -1,27 +1,23 @@
 const express = require('express');
-const adminController = require('../controllers/admin');
-const userController = require('../controllers/user');
+const itemRouter = require('/item');
+const userRouter = require('/user');
 
 const router = express.Router();
 
-//Index routes
+/*//Index routes
 router.get('/', adminController.getItemIndex);
-router.get('/', userController.getUserIndex);
-
-//Add getter routes
-router.get('/add-user', userController.getAddUser);
-router.get('/add-item', adminController.getAddItem);
+router.get('/', userController.getUserIndex);*/
 
 //POST routes
-router.post('/add-user', userController.postUser);
-router.post('/add-item', adminController.postItem);
+router.post('/user', userRouter.postUser);
+router.post('/item', itemRouter.postItem);
 
-//Filter routes
-router.get('/:itemId', adminController.getItem);
-router.get('/:userId', userController.getUser);
-router.get('/:itemTags', adminController.getItemByTag);
-router.get('/get-by-name/:itemName', adminController.getItemByName);
-router.get('/get-by-price/:itemPrice', adminController.getItemByPrice);
-router.get('/login', userController.loginUser);
+//GET routes
+router.get('/:itemId', itemRouter.getItem);
+router.get('/:userId', userRouter.getUser);
+router.get('/tags', itemRouter.getItemByTag);
+router.get('/name', itemRouter.getItemByName);
+router.get('/price', itemRouter.getItemByPrice);
+router.get('/login', userRouter.loginUser);
 
 module.exports = router;

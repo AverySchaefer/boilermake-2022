@@ -29,7 +29,7 @@ mongoose
         useNewUrlParser: true,
     })
     .then(() => {
-        app.listen(port, () => console.log(`Server and Database running on ${port}, http://localhost:${port}`));
+        app.listen(port, () => console.log(`⚡️ Server and 🔌 Database running on ${port}, http://localhost:${port}`));
     })
     .catch((err) => {
         console.log(err);
