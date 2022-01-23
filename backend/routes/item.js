@@ -70,3 +70,27 @@ const getAllItems = async (req, res) => {
 
 	res.status(200).send({ items: items });
 };
+
+itemRouter.get('/price', async (req, res) => {
+    let { maxPrice } = req.body;   
+    if (!maxPrice) {
+        res.status(400).send({ msg: 'A max price must be provided.' });
+		return;
+    }
+
+    let items = [];
+    try {
+        items = await Item.find({price: {$lt: maxPrice}}).exec();
+    } catch (error) {
+        console.error(e);
+		res.status(500).send({ msg: 'An internal server error occurred.' });
+		return;
+    }
+
+    if (!items) {
+		res.status(400).send({ msg: 'No such item exists.' });
+		return;
+	}
+
+    res.status(200).send({ items: items });
+});
