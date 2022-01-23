@@ -1,4 +1,5 @@
-const Item = require('../models/item');
+import { Router } from 'express';
+import { Item } from '../models/item';
 
 const itemRouter = Router();
 
@@ -145,3 +146,5 @@ itemRouter.get('/name', async (req, res) => {
 
     res.status(200).send({ items: items });
 });
+
+export { itemRouter };
