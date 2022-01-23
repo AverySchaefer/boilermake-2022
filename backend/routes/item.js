@@ -120,3 +120,28 @@ itemRouter.get('/tag', async (req, res) => {
 
     res.status(200).send({ items: items });
 });
+
+//Get item(s) with a speicific name
+itemRouter.get('/name', async (req, res) => {
+    let { name } = req.body;   
+    if (!name) {
+        res.status(400).send({ msg: 'A product name must be provided.' });
+		return;
+    }
+
+    let items = [];
+    try {
+        items = await Item.find({name: name}).exec();
+    } catch (error) {
+        console.error(e);
+		res.status(500).send({ msg: 'An internal server error occurred.' });
+		return;
+    }
+
+    if (!items) {
+		res.status(400).send({ msg: 'No such item exists.' });
+		return;
+	}
+
+    res.status(200).send({ items: items });
+});
