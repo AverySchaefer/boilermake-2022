@@ -1,14 +1,16 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-const cors = require('cors');
-const adminRoute = require('./routes/admin');
+import { Router } from 'express';
+import express  from 'express';
+import mongoose from 'mongoose';
+//const path = require('path');
+//const cors = require('cors');
+import itemRouter from './routes/item';
+import userRouter from './routes/user';
 
 require('dotenv').config();
 
-const app = express();
+let app = express();
 
-app.use(cors());
+/*app.use(cors());
 
 app.set('view engine', 'ejs');
 app.set('views', './src/pages');
@@ -17,7 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/static', express.static(path.join(`${__dirname}/public`)));
 
-app.use('/', adminRoute);
+app.use('/', adminRoute);*/
+app.use('/api/items', itemRouter);
+app.use('/api/users', userRouter)
 
 
 
