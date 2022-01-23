@@ -3,15 +3,25 @@
   display: flex;
   justify-content: center;
   background-color: white;
-
   align-items: center;
 }
 
+.Items {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+
+.recommendedItem {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
 .item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   flex: 1;
-  width: 16rem;
+  width: 10rem;
   height: 8rem;
   border-radius: 30px;
   transition: all 0.2s;
@@ -21,12 +31,39 @@
   border: solid;
   cursor: pointer;
   margin: 1rem;
+  padding: 1rem;
 }
 
 .item:hover {
   transform: scale(1.1);
 }
+
+.item-box {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  overflow: hidden;
+}
+
+.left-item {
+  float: left;
+}
+
+.right-item {
+  float: right;
+}
+
 .searchInput input {
   border: 0;
   padding: 15px;
+}
+
+.desc {
+  list-style-type: none;
 }
