@@ -73,6 +73,23 @@ exports.getItemByName = async (req, res) => {
     }
 };
 
+exports.getItemByPrice = async (req, res) => {
+    //console.log("in getItemByTag");
+    const itemPrice = req.params.itemPrice;
+    const trimmedPrice = itemPrice.replace(':', '');
+    //console.log("got tags");
+    console.log(itemPrice);
+    console.log(trimmedPrice);
+    const items = await Item.find({price: {$lt: trimmedPrice}}).clone().catch(function(err){ });
+    //console.log("retrieved items");
+    try {
+        console.log(items);
+        res.status(200).render('item', { item: items });
+    }  catch (error) {
+        console.log(error);
+    }
+};
+
 //Getter methods for different models
 
 exports.getUser = async (req, res) => {

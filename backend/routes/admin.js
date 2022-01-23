@@ -17,5 +17,6 @@ router.get('/:itemId', adminController.getItem);
 router.get('/:userId', userController.getUser);
 router.get('/:itemTags', adminController.getItemByTag);
 router.get('/get-by-name/:itemName', adminController.getItemByName);
+router.get('/get-by-price/:itemPrice', adminController.getItemByPrice);
 
 module.exports = router;

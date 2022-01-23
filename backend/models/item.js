@@ -7,6 +7,10 @@ const ItemSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    price: {
+        type: Number,
+        required: true,
+    },
     item_id: {
         type: mongoose.ObjectId,
         required: false,
