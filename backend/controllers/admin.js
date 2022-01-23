@@ -56,6 +56,23 @@ exports.getItemByTag = async (req, res) => {
     }
 };
 
+exports.getItemByName = async (req, res) => {
+    //console.log("in getItemByTag");
+    const itemName = req.params.itemName;
+    const trimmedName = itemName.replace(':', '');
+    //console.log("got tags");
+    console.log(itemName);
+    console.log(trimmedName);
+    const item = await Item.find({name: trimmedName}).clone().catch(function(err){ });
+    //console.log("retrieved items");
+    try {
+        console.log(item);
+        res.status(200).render('item', { item: item });
+    }  catch (error) {
+        console.log(error);
+    }
+};
+
 //Getter methods for different models
 
 exports.getUser = async (req, res) => {
