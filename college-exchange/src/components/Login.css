@@ -13,13 +13,9 @@
 .login-wrapper {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  /* background-color: blanchedalmond; */
-  flex-flow: column;
-  width: 100px;
-}
+  /* flex-direction: column; */
 
-.login-box {
+  width: 100px;
 }
 
 .email-text {
@@ -46,9 +42,23 @@
   animation: ease-in-out;
   margin-bottom: 1rem;
   cursor: pointer;
+  height: 2rem;
+  display: flex;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1rem;
+  transition: all 0.5s;
+  animation: ease-in-out;
+}
+
+.login-btn:hover {
+  color: black;
+  box-shadow: 3px 3px 3px black;
 }
 
 .password-btn {
+  margin-left: 1rem;
   font-family: "Source Sans Pro", sans-serif;
   color: white;
   background-color: #c28e0e;
@@ -56,8 +66,20 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-
+  margin-top: auto;
+  margin-bottom: auto;
   transition: all 1s;
   animation: ease-in-out;
-  margin-bottom: 1rem;
+
+  height: 3rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: all 0.5s;
+  animation: ease-in-out;
+}
+
+.password-btn:hover {
+  color: black;
+  box-shadow: 3px 3px 3px black;
 }

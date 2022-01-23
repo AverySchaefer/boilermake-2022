@@ -7,6 +7,7 @@
   height: 3rem;
   background: #ceb888;
   border: solid #c28e0e;
+  width: 100%;
 }
 
 .below-logo {
@@ -24,7 +25,7 @@
 
 .nav-links {
   display: flex;
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   color: #000000;
   transition: all 0.2s;

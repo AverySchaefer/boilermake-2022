@@ -21,9 +21,14 @@ export class Home extends Component {
               return (
                 <li className={item.cname}>
                   <div className="item-box">
+                    <img
+                      className="product-image"
+                      src={item.imageURL}
+                      alt="Product"
+                    ></img>
                     <div className="row">
                       <div className="desc left-item">
-                        Product name: {item.productName1}
+                        Product name: {item.productName}
                       </div>
                       <div className="divider" />
                       <div className="desc right-item">
@@ -32,7 +37,7 @@ export class Home extends Component {
                     </div>
 
                     <div className="row">
-                      <li className="desc">Item price: {item.price}</li>
+                      <li className="desc">Item price($): {item.price}</li>
                       <div className="divider" />
                       <li className="desc">ratings: {item.ratings}</li>
                     </div>

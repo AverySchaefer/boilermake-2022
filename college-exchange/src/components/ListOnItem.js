@@ -5,11 +5,20 @@ export class ListOnItem extends Component {
   render() {
     return (
       <div>
+        <h1>Please Upload Your Item</h1>
         <div className="list-wrapper">
           <div className="product">
             Product name: <input type="text" placeholder="Product name"></input>
             Price($):<input type="text" placeholder="Price"></input>
+            ImageURL:
+            <textarea
+              type="text"
+              placeholder="Put imageURL"
+              className="imageURL"
+              rows="3"
+            ></textarea>
           </div>
+
           <div className="descNTag">
             <textarea
               type="text"
