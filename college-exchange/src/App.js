@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Chat from "./components/Chat";
 import ListOnItem from "./components/ListOnItem";
-import UserProfile from "./components/UserProfile";
-import Sell from "./components/Sell";
+import UserProfile from "./components/UserProfile/UserProfile";
+
 import Login from "./components/Login";
 
 function App() {
@@ -22,8 +22,6 @@ function App() {
           <Route path="/home" element={<Home />} />
 
           <Route path="/chat" element={<Chat />} />
-
-          <Route path="/sell" element={<Sell />} />
 
           <Route path="/listOnItem" element={<ListOnItem />} />
 

@@ -2,6 +2,10 @@ h1 {
   margin-bottom: 0;
 }
 
+i {
+  cursor: pointer;
+}
+
 .searchInput {
   margin-top: 1rem;
   display: flex;

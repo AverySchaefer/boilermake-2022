@@ -6,6 +6,7 @@
   justify-content: center; */
   object-fit: cover;
   width: 3rem;
+  margin-left: 3rem;
 }
 
 .btn-wrapper {
@@ -14,6 +15,10 @@
   padding-top: 1rem;
   padding-right: 1rem;
   text-decoration: none;
+}
+
+.logo-img {
+  padding-left: 1rem;
 }
 
 .login-box {

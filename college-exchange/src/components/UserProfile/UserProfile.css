@@ -1,0 +1,70 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.text-desc {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding-left: 1rem;
+}
+
+.name {
+  height: 15px;
+}
+
+.desc {
+  background-color: cornsilk;
+
+  height: 10rem;
+  width: 10rem;
+  overflow-wrap: break-word;
+}
+
+.profile-img {
+  width: 12rem;
+  height: 15rem;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  background-color: #ceb888;
+  width: 10rem;
+  padding: 20px;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  animation: ease-in-out;
+  cursor: pointer;
+}
+
+.historyItem:hover {
+  transform: scale(1.1);
+}
+
+.historyItemName {
+  height: 15px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.historyItemPrice {
+  height: 15px;
+  width: 100px;
+  margin: 10px;
+}
+
+.histories {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.historyImg {
+  width: 10rem;
+}
