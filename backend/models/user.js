@@ -7,7 +7,7 @@ const UserSchema = mongoose.Schema({
     },
     user_id: {
         type: mongoose.ObjectId,
-        required: true,
+        required: false,
     },
     email: {
         type: String,
