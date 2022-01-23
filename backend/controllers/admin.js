@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Item = require('../models/item');
 
+//Get indexes of items and users
 exports.getItemIndex = async (req, res) => {
     //res.status(200).render('index');
     const item = await Item.find((data) => data).clone().catch(function(err){});
@@ -25,7 +26,7 @@ exports.getUserIndex = async (req, res) => {
     }
 };
 
-// methods for getting item
+//methods for getting item with various filters
 exports.getItem = async (req, res) => {
     const itemId = req.params.itemId;
     //console.log(itemId);
@@ -90,8 +91,7 @@ exports.getItemByPrice = async (req, res) => {
     }
 };
 
-//Getter methods for different models
-
+//Get single items or users via ID
 exports.getUser = async (req, res) => {
     const userId = req.params.userId;
 
@@ -112,6 +112,7 @@ exports.getAddUser = (req, res) => {
     res.status(200).render('edit-user');
 };
 
+//POST methods for items and users
 exports.postUser = (req, res) => {
     const { name, user_id, rating, num_ratings, profile_picture, purchase_history, listing_history} = req.body;
 
