@@ -12,6 +12,26 @@ exports.getUserIndex = async (req, res) => {
     }
 };
 
+exports.loginUser = async (req, res) => {
+    const email = req.params.email;
+    const checkPassword = req.params.password;
+
+    const user = await User.findOne({email: email}).clone().catch(function(err){ });
+    if (user == undefined) {
+        res.status(404).render('index'); //This will take the user to the login page but it doesn't exist
+    }
+    try {
+        console.log(user);
+        if (user.password == checkPassword) {
+            res.status(200).render('index');
+        } else {
+            res.status(404).render('index'); //Same as line 21
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 
 //Getter methods for different models
 
