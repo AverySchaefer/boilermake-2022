@@ -3,7 +3,7 @@ const Item = require('../models/item');
 const itemRouter = Router();
 
 itemRouter.post('/item', async (req, res) => {
-    let { item, name, user_id, rating, num_ratings, profile_picture, purchase_history, listing_history} = req.body;
+    let { item, item_id, name, price, seller_id, description, images, tag} = req.body;
 
     if (!item) {
         res.status(400).send({ msg: 'Item data must be provided.' });
@@ -26,3 +26,5 @@ itemRouter.post('/item', async (req, res) => {
 		msg: 'New item listing successfully created.',
 	});
 });
+
+itemRouter.get()
