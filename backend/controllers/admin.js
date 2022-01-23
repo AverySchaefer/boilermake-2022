@@ -51,7 +51,7 @@ exports.getItemByTag = async (req, res) => {
     //console.log("retrieved items");
     try {
         console.log(item);
-        res.status(200).render('item', { item: item });
+        res.status(200).send({ item: item });
     }  catch (error) {
         console.log(error);
     }
