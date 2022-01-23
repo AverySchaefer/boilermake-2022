@@ -2,16 +2,17 @@ export const Items = [
   {
     cname: "item",
     imageURL:
-      "https://www.seriouseats.com/thmb/Gm6J49wltvTCH2dXt039zkvGZLg=/880x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__04__20180309-french-fries-vicky-wasik-15-5a9844742c2446c7a7be9fbd41b6e27d.jpg",
-    productName: "French Fries",
-    price: "$12",
+      "https://i5.walmartimages.com/asr/bb3c4eb0-0ada-4cef-8b5f-97a11fa7ef0f.2d3805e39285bde9b9884e68e76e3608.jpeg",
+    productName: "Tablet",
+    price: "$1200",
     sellerName: "Joseph",
     ratings: "4",
   },
   {
     cname: "item",
-    imageURL: "https://cdna.4imprint.com/prod/rend/300/238716/15_15.jpg",
-    productName: "Eraser",
+    imageURL:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw5bb15688/images/1170000/1178752.jpg?sfrm=jpg",
+    productName: "Bed",
     price: "$10",
     sellerName: "Kyochul",
     ratings: "5",

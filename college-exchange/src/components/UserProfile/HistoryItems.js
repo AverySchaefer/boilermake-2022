@@ -9,24 +9,25 @@ export const HistoryItems = [
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1280px-A_small_cup_of_coffee.JPG",
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw04b3c19c/images/600000/606028.jpg?sfrm=jpg",
     alter: "Alt",
-    product: "Coffee",
-    price: "$3",
+    product: "Desk",
+    price: "$45",
     cName: "history-items",
   },
   {
-    image: "https://static.toiimg.com/thumb/59666824.cms?width=1200&height=900",
+    image: "https://m.media-amazon.com/images/I/61ct2SLWhJS._AC_SL1500_.jpg",
     alter: "Alt",
-    product: "Jelly",
-    price: "$8",
+    product: "Mechanical Keyboard",
+    price: "$90",
     cName: "history-items",
   },
   {
-    image: "https://m.media-amazon.com/images/I/71MQeIS7FAL._SL1500_.jpg",
+    image:
+      "https://res-5.cloudinary.com/dwpujv6in/image/upload/c_lpad,dpr_2.0,f_auto,h_560,q_auto:eco,w_700/v1/media/catalog/product/h/o/ho1_dnchwl_st_frontlow-host-dining-chair-tait-stone-walnut_1.jpg",
     alter: "Alt",
-    product: "Doritos",
-    price: "$8",
+    product: "Chair",
+    price: "$80",
     cName: "history-items",
   },
   {
