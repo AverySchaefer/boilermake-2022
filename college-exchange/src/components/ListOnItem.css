@@ -1,0 +1,28 @@
+.list-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.product {
+  display: flex;
+  height: 2rem;
+  flex-flow: column;
+  padding: 1rem;
+}
+
+.descNTag {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 20rem;
+}
+
+.description {
+  margin: 1rem;
+}
+
+.btn {
+  margin: 1rem;
+}

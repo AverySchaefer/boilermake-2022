@@ -21,10 +21,21 @@ export class Home extends Component {
               return (
                 <li className={item.cname}>
                   <div className="item-box">
-                    <p1>{item.productName1}</p1>
-                    {item.sellerName}
-                    {item.price}
-                    {item.ratings}
+                    <div className="row">
+                      <div className="desc left-item">
+                        Product name: {item.productName1}
+                      </div>
+                      <div className="divider" />
+                      <div className="desc right-item">
+                        Seller name: {item.sellerName}
+                      </div>
+                    </div>
+
+                    <div className="row">
+                      <li className="desc">Item price: {item.price}</li>
+                      <div className="divider" />
+                      <li className="desc">ratings: {item.ratings}</li>
+                    </div>
                   </div>
                 </li>
               );
